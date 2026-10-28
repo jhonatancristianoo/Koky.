@@ -129,3 +129,92 @@ h2 em { font-style: normal; color: var(--muted); }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* k.oky — visual minimalista */
+:root {
+  --bg: #000000;
+  --surface: #000000;
+  --surface-2: #111111;
+  --text: #f4f4f4;
+  --muted: #999999;
+  --line: #202020;
+  --accent: #d7ff64;
+  --button-text: #000000;
+  --grain-opacity: 0;
+}
+
+html,
+body {
+  background: #000 !important;
+  background-image: none !important;
+}
+
+.grain {
+  display: none !important;
+}
+
+/* Esconde os textos e elementos decorativos antigos */
+.hero,
+.intro,
+.manifesto,
+.contact,
+.site-footer {
+  display: none !important;
+}
+
+/* Cabeçalho simples */
+.site-header {
+  background: #000 !important;
+  backdrop-filter: none !important;
+  border-bottom: 1px solid #202020;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.wordmark {
+  color: #fff;
+}
+
+.wordmark span {
+  color: #d7ff64;
+}
+
+/* Aparência da barra de pesquisa */
+.koky-search-wrap {
+  margin-top: 22px;
+}
+
+.koky-search {
+  background: #080808 !important;
+  border: 1px solid #242424 !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+
+.koky-search-results {
+  background: #080808 !important;
+  border-color: #242424 !important;
+}
+
+/* Ajustes para celular */
+@media (max-width: 620px) {
+  .site-header {
+    height: 70px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .desktop-nav {
+    gap: 12px;
+    margin-right: 10px;
+  }
+
+  .desktop-nav a {
+    font-size: 11px;
+  }
+
+  .koky-search-wrap {
+    width: calc(100% - 32px);
+    margin-top: 18px;
+  }
+}
